@@ -416,6 +416,10 @@ h3 {
 
 }
 
+@media (min-width: 768px) and (orientation: portrait) {
+    section { padding: 50px 70px; }
+}
+
 /* ----- Version desktop ----- */
 
 @media (min-width:1024px){
