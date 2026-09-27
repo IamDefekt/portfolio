@@ -57,7 +57,7 @@
                         <h3>Arch'Lune</h3>
                         <p>Site réalisé pour l'association Arch'Lune. Code et hébergement appartiennent au client.</p>
                         <div class="btns">
-                            <a class="green-btn" href="/">Voir la vidéo démo</a>
+                            <a class="green-btn" href="/" data-video="cNUObt1yNeI">Voir la vidéo démo</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                         <h3>Métal Corner</h3>
                         <p>Agenda participatif pour les concerts métal en Rhône-Alpes. </p>
                         <div class="btns">
-                            <a class="green-btn" href="/">Voir la vidéo démo</a>
+                            <a class="green-btn" href="/" data-video="3ZTZvrJKNPk">Voir la vidéo démo</a>
                             <a class="white-btn" href="https://github.com/IamDefekt/ProjetMetalCorner" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon dépôt Github">Voir le code</a>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
             <div id="about">
                 <h2>À propos de moi</h2>
                 <div class="description">
-                    <img src="./medias/avatar.png" alt="Photo de profil">
+                    <img src="./medias/avatar.avif" alt="Photo de profil">
 
                     <div class="texte">
                         <p>Après plusieurs années dans le commerce et la relation client, j'ai décidé de me reconvertir dans le développement web. <br><br> Ce que j'aime dans ce métier : construire des choses concrètes, résoudre des problèmes, et continuer à apprendre en permanence.</p>
@@ -204,6 +204,16 @@
             </div>
         </section>
     </main>
+
+    <div class="modal" id="video-modal" hidden>
+        <div class="modal-overlay" data-close></div>
+        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
+        <div class="modal-content video-modal-content">
+            <div class="video-wrapper">
+                <iframe class="modal-video" src="" title="Vidéo démo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     
     <div class="modal" id="maquette-modal" hidden>
         <div class="modal-overlay" data-close></div>
