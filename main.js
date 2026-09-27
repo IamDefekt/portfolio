@@ -17,6 +17,39 @@ document.querySelectorAll('#menu a').forEach((link) => {
     });
 });
 
+// Pop-up pour les vidéos démo
+
+const videoModal = document.getElementById('video-modal');
+
+if (videoModal) {
+    const videoFrame = videoModal.querySelector('.modal-video');
+
+    function openVideoModal(videoId) {
+        videoFrame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+        videoModal.hidden = false;
+    }
+
+    function closeVideoModal() {
+        videoModal.hidden = true;
+        videoFrame.src = '';
+    }
+
+    document.querySelectorAll('[data-video]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openVideoModal(link.dataset.video);
+        });
+    });
+
+    videoModal.querySelectorAll('[data-close]').forEach((el) => {
+        el.addEventListener('click', closeVideoModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !videoModal.hidden) closeVideoModal();
+    });
+}
+
 // Pop-up pour les maquettes
 
 const modal = document.getElementById('maquette-modal');
