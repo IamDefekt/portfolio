@@ -72,6 +72,14 @@ if (modal) {
             e.preventDefault();
             openModal(card);
         });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card);
+            }
+        });
+
     });
 
     modal.querySelectorAll('[data-close]').forEach((el) => {
