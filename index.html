@@ -12,7 +12,10 @@
 <body>
     <header>
         <nav>
-            <p><a href="#hero">Dorine Ponsi</a></p>
+            <div class="title">
+                <img src="./medias/avatar.avif" alt="Photo de profil">
+                <p><a href="https://iamdefekt.github.io/portfolio/">Dorine P.</a></p>
+            </div>
 
             <button id="menuBurger" class="burger">
                 <span></span>
@@ -22,200 +25,12 @@
 
             <div class="liste" id="menu">
                 <ul>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#maquettes">Maquettes</a></li>
+                    <li><a href="#real">Réalisations</a></li>
                     <li><a href="#about">À propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Me contacter</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-
-    <main>
-        <section id="hero">
-            <p class="tag corail">Disponible - junior front-end dev</p>
-            <h1>Je construis des interfaces claires, pensées pour l'utilisateur.</h1>
-            <p>Développeuse web en reconversion, je mise sur un profil hybride : des années de relation client qui m'ont appris à écouter les besoins, et une formation full-stack qui m'a menée vers ce qui me passionne le plus : le front-end.</p>
-
-            <div class="btns">
-                <a class="green-btn" href="#projets">Voir mes projets</a>
-                <a class="white-btn" href="./medias/CV_Dorine_PONSI.pdf" download>Télécharger mon CV</a>
-            </div>
-        </section>
-
-        <section id="projets">
-            <h2>Projets</h2>
-
-            <div class="cards-container">
-                <div class="card">
-                    <div class="pic green">
-                        <svg class="icon-play" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M7 4v16l13 -8z" />
-                        </svg>
-                    </div>
-
-                    <div class="prez">
-                        <p class="tag green">Projet client</p>
-                        <h3>Arch'Lune</h3>
-                        <p>Site réalisé pour l'association Arch'Lune. Code et hébergement appartiennent au client.</p>
-                        <div class="btns">
-                            <a class="green-btn" href="/" data-video="cNUObt1yNeI">Voir la vidéo démo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="pic green">
-                        <svg class="icon-play" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M7 4v16l13 -8z" />
-                        </svg>
-                    </div>
-                    <div class="prez">
-                        <p class="tag green">Projet perso</p>
-                        <h3>Metal Corner</h3>
-                        <p>Agenda participatif pour les concerts métal en Rhône-Alpes. </p>
-                        <div class="btns">
-                            <a class="green-btn" href="/" data-video="3ZTZvrJKNPk">Voir la vidéo démo</a>
-                            <a class="white-btn" href="https://github.com/IamDefekt/ProjetMetalCorner" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon dépôt Github">Voir le code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="pic corail">
-                        <svg class="icon-server" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
-                            <path d="M3 14m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
-                            <path d="M7 8l0 .01" />
-                            <path d="M7 18l0 .01" />
-                        </svg>
-                    </div>                    
-
-                    <div class="prez">
-                        <p class="tag corail">API/Back-end</p>
-                        <h3>TaskFlow</h3>
-                        <p>API REST de gestion de tâches avec authentification JWT.</p>
-                        <div class="btns">
-                            <!-- <a class="green-btn" href="/">Voir la démo API</a> -->
-                            <a class="white-btn" href="https://github.com/IamDefekt/TaskFlow" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon dépôt Github">Voir le code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="maquettes">
-            <h2>Maquettes réalisées en formation</h2>
-
-            <div class="cards-container">
-
-                    <div class="card" data-full="./medias/Maquette-Gaia.png" role="button" tabindex="0" aria-label="Agrandir la maquette Gaïa">
-                        <div class="pic">
-                            <img src="./medias/Gaia-Preview.png" alt="">
-                        </div>
-                        
-                        <div class="prez">
-                            <h3>Gaïa</h3>
-                            <p>Maison d'hôtes</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-full="./medias/Maquette-Nebulax.png" role="button" tabindex="0" aria-label="Agrandir la maquette Nebulax">
-                        <div class="pic">
-                            <img src="./medias/Nebulax-Preview.png" alt="">
-                        </div>
-                        
-                        <div class="prez">
-                            <h3>Nebulax</h3>
-                            <p>Hébergement cloud</p>
-                        </div>
-                    </div>
-
-                    <div class="card" data-full="./medias/Maquette-StudioHorizon.png" role="button" tabindex="0" aria-label="Agrandir la maquette Studio Horizon">
-                        <div class="pic">
-                            <img src="./medias/StudioHorizon-Preview.png" alt="">
-                        </div>
-                        
-                        <div class="prez">
-                            <h3>Studio Horizon</h3>
-                            <p>Cabinet d'architectes</p>
-                        </div>
-                    </div>
-
-            </div>
-
-        </section>
-
-        <section class="perso">
-            <div id="about">
-                <h2>À propos de moi</h2>
-                <div class="description">
-                    <img src="./medias/avatar.avif" alt="Photo de profil">
-
-                    <div class="texte">
-                        <p>Développeuse web junior, titulaire du titre professionnel Développeur Web et Web Mobile. J'aime transformer une maquette en site qui fonctionne vraiment, avec un soin particulier pour l'interface : les détails, la lisibilité, le responsive. <br><br> Les projets réalisés pendant ma formation m'ont fait toucher à tout : un agenda de concerts métal en PHP, un back-office pour une compagnie de spectacle, une petite API en Node.js. Je continue d'apprendre à chaque projet, et je cherche maintenant une équipe où progresser.</p>
-
-                        <div class="skills">
-                            <p>HTML/CSS</p>
-                            <p>JavaScript</p>
-                            <p>PHP</p>
-                            <p>Git</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact">
-                <h2>Contact</h2>
-                <p>Une opportunité, une question ? Écrivez-moi directement.</p>
-
-                <div class="btns">
-                    <a class="green-btn" href="mailto:dorine.ponsi@gmail.com" aria-label="Lien pour m'envoyer un mail">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                            <path d="M3 7l9 6l9 -6" />
-                        </svg>
-                        Envoyer un mail
-                    </a>
-
-                    <a class="white-btn" href="https://www.linkedin.com/in/dorineponsi/" target="_blank" aria-label="Lien vers mon LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M4 4m0 1a1 1 0 0 1 1 -1h14a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-14a1 1 0 0 1 -1 -1z" />
-                            <path d="M8 11v5" />
-                            <path d="M8 8v.01" />
-                            <path d="M12 16v-5" />
-                            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-                        </svg> 
-                        LinkedIn
-                    </a>
-
-                    <a class="white-btn" href="https://github.com/IamDefekt" target="_blank" aria-label="Lien vers mon Github">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-                        </svg>
-                        Github
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div class="modal" id="video-modal" hidden>
-        <div class="modal-overlay" data-close></div>
-        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
-        <div class="modal-content video-modal-content">
-            <div class="video-wrapper">
-                <iframe class="modal-video" src="" title="Vidéo démo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal" id="maquette-modal" hidden>
-        <div class="modal-overlay" data-close></div>
-        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
-        <div class="modal-content">
-            <img class="modal-img" src="" alt="">
-        </div>
-    </div>
 </body>
 </html>
