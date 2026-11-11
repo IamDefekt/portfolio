@@ -4,6 +4,7 @@
 
 const burger = document.getElementById('menuBurger');
 const menu = document.getElementById('menu');
+const desktop = window.matchMedia('(min-width: 1024px)');
 
 burger.addEventListener('click', () => {
     menu.classList.toggle('open'); 
@@ -15,6 +16,28 @@ document.querySelectorAll('#menu a').forEach((link) => {
         menu.classList.remove('open');
         burger.classList.remove('open');
     });
+});
+
+desktop.addEventListener('change', (e) => {
+    if (e.matches) {
+        menu.classList.remove('open');
+        burger.classList.remove('open');
+    }
+});
+
+// Light/Dark mode
+
+const root = document.documentElement;
+const toggleTheme = document.getElementById('toggle-theme');
+
+const saved = localStorage.getItem('theme');
+const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+root.dataset.theme = saved ?? (systemDark ? 'dark' : 'light');
+
+toggleTheme.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
 });
 
 // Pop-up pour les vidéos démo
