@@ -80,29 +80,19 @@ const modal = document.getElementById('maquette-modal');
 if (modal) {
     const modalImg = modal.querySelector('.modal-img');
 
-    function openModal(card) {
-        modalImg.src = card.dataset.full;
-        modalImg.alt = card.querySelector('img').alt;
+    function openModal(link) {
+        modalImg.src = link.dataset.full;
+        modalImg.alt = link.getAttribute('aria-label') ?? '';
         modal.hidden = false;
     }
 
     function closeModal() {
         modal.hidden = true;
+        modalImg.src = '';
     }
 
-    document.querySelectorAll('#maquettes .card').forEach((card) => {
-        card.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal(card);
-        });
-
-        card.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                openModal(card);
-            }
-        });
-
+    document.querySelectorAll('[data-full]').forEach((btn) => {
+        btn.addEventListener('click', () => openModal(btn));
     });
 
     modal.querySelectorAll('[data-close]').forEach((el) => {
