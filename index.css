@@ -292,7 +292,7 @@ h2 {
 }
 
 .preview {
-    height: 80px;
+    height: 110px;
     width: auto;
     background-color: var(--section-bg);
     display: flex;
@@ -301,7 +301,7 @@ h2 {
 }
 
 .preview p {
-    font: 1.2rem Space Grotesk;
+    font: 1.7rem Space Grotesk;
     font-weight: 700;
     background-image: var(--gradient);
     color: transparent;
@@ -353,6 +353,12 @@ h2 {
 }
 
 .prez > a, .prez > .cta {margin-top: auto;}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 @media (min-width: 1024px) {
