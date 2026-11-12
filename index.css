@@ -28,7 +28,12 @@
     --buttons-contact: #4ade80;
     --skill-bg: #173026;
     --skills-text: #a7f3c0;
-    color-scheme: dark
+    color-scheme: dark;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -193,7 +198,6 @@ h1 {
 #hero p, #about-skills p {
     max-width: 60ch;
     color: var(--second-text);
-    font-size: 1.1rem;
 }
 
 .cta {
@@ -258,16 +262,98 @@ h2 {
 
 .chips ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
 .chips li {
     background-color: var(--skill-bg);
     color: var(--skills-text);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     padding: 5px 10px;
     border-radius: 10px;
 }
+
+/* SECTION REALISATIONS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.preview {
+    height: 80px;
+    width: auto;
+    background-color: var(--section-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview p {
+    font: 1.2rem Space Grotesk;
+    font-weight: 700;
+    background-image: var(--gradient);
+    color: transparent;
+    background-clip: text;
+}
+
+.prez {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.description {min-height: 100px;}
+
+.prez h3 {font-size: 1.15rem;}
+
+.prez p {
+    color: var(--second-text);
+    font-size: 0.9rem;
+}
+
+.cardChips ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cardChips li {
+    background-color: var(--skill-bg);
+    color: var(--skills-text);
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    border-radius: 10px;
+}
+
+.prez a {
+    font-size: 0.9rem;
+    color: var(--skills-text);
+    align-self: flex-start;
+}
+
+.prez > .cta {
+    margin-top: 0;
+    gap: 0;
+    column-gap: 30px;
+}
+
+.prez > a, .prez > .cta {margin-top: auto;}
+
 
 @media (min-width: 1024px) {
 
@@ -341,7 +427,16 @@ h2 {
 
     .chips li {padding: 6px 12px;}
 
-    .chips ul {gap: 20px;}
+    .chips ul {
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
 
-    
+    /* SECTION REALISATIONS */
+
+    .prez a:hover {
+        filter: brightness(1.1); 
+        transform: translateY(-1px);
+        transition: transform 0.2s ease;
+    }
 }
