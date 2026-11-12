@@ -127,7 +127,7 @@
                             </ul>
                         </div>
 
-                        <a href="/" data-video="cNUObt1yNeI">Voir la vidéo démo →</a>
+                        <a href=""https://www.youtube.com/watch?v=cNUObt1yNeI"" data-video="cNUObt1yNeI" aria-label="Lien vers la vidéo démo sur youtube">Voir la vidéo démo →</a>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@
                         </div>
 
                         <div class="cta">
-                            <a href="/" data-video="3ZTZvrJKNPk" aria-label="Lein vers la vidéo démo sur youtube">Voir la vidéo démo →</a>
+                            <a href=""https://www.youtube.com/watch?v=3ZTZvrJKNPk"" data-video="3ZTZvrJKNPk" aria-label="Lien vers la vidéo démo sur youtube">Voir la vidéo démo →</a>
                             <a href="https://github.com/IamDefekt/ProjetMetalCorner" target="_blank" rel="noopener noreferrer">Voir le code →</a>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                             </ul>
                         </div>
 
-                        <a data-full="./medias/Maquette-Gaia.png" role="button" tabindex="0" aria-label="Agrandir la maquette Gaïa">Voir la maquette →</a>
+                        <button type="button" class="linkBtn" data-full="./medias/Maquette-Gaia.png" aria-label="Agrandir la maquette Gaïa">Voir la maquette →</button>
                     </div>
                 </div>
 
@@ -216,7 +216,7 @@
                             </ul>
                         </div>
 
-                        <a data-full="./medias/Maquette-Nebulax.png" role="button" tabindex="0" aria-label="Agrandir la maquette Nébulax">Voir la maquette →</a>
+                        <button type="button" class="linkBtn" data-full="./medias/Maquette-Nebulax.png" aria-label="Agrandir la maquette Nébulax">Voir la maquette →</button>
                     </div>
                 </div>
 
@@ -237,12 +237,31 @@
                             </ul>
                         </div>
 
-                        <a data-full="./medias/Maquette-StudioHorizon.png" role="button" tabindex="0" aria-label="Agrandir la maquette Studio Horizon">Voir la maquette →</a>
+                        <button type="button" class="linkBtn" data-full="./medias/Maquette-StudioHorizon.png" aria-label="Agrandir la maquette Studio Horizon">Voir la maquette →</button>
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
+
+    <div class="modal" id="video-modal" hidden>
+        <div class="modal-overlay" data-close></div>
+        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
+        <div class="modal-content video-modal-content">
+            <div class="video-wrapper">
+                <iframe class="modal-video" src="" title="Vidéo démo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="maquette-modal" hidden>
+        <div class="modal-overlay" data-close></div>
+        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
+        <div class="modal-content">
+            <img class="modal-img" src="" alt="">
+        </div>
+    </div>
+
 </body>
 </html>
