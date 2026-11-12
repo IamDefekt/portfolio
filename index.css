@@ -28,12 +28,14 @@
     --buttons-contact: #4ade80;
     --skill-bg: #173026;
     --skills-text: #a7f3c0;
+    color-scheme: dark
 }
 
 body {
     background-color: var(--bg) ;
     color: var(--main-text);
     font: 1rem Inter;
+    line-height: 1.6
 }
 
 /* HEADER */
@@ -53,6 +55,7 @@ nav {
 }
 
 nav, section {
+    width: 100%;
     max-width: 1350px; 
     margin-inline: auto; 
     padding-inline: 24px;
@@ -175,6 +178,8 @@ main {
     gap: 40px;
 }
 
+section {padding-block: 24px;}
+
 h1 {
     font: clamp(3.2rem, 2.21rem + 4.21vw, 6rem) Space Grotesk;
     font-weight: 700;
@@ -185,10 +190,10 @@ h1 {
     line-height: 1.1;
 }
 
-#hero p {
+#hero p, #about-skills p {
     max-width: 60ch;
     color: var(--second-text);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .cta {
@@ -221,6 +226,47 @@ h1 {
 .greenBtn:focus-visible, .whiteBtn:focus-visible {
     outline: 2px solid var(--buttons-contact);
     outline-offset: 3px;
+}
+
+/* SECTION ABOUT */
+
+#about-skills {
+    background-color: var(--section-bg);
+    box-shadow: 0 0 0 100vmax var(--section-bg);
+    clip-path: inset(0 -100vmax);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h2 {
+    font: 1.8rem Space Grotesk;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.chips ul {
+    display: flex;
+    gap: 15px;
+}
+
+.chips li {
+    background-color: var(--skill-bg);
+    color: var(--skills-text);
+    font-size: 0.95rem;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -258,9 +304,9 @@ h1 {
 
     /* SECTION HERO */
 
-    section {padding-top: 60px;}
+    section {padding-block: 50px;}
 
-    #hero p {font-size: 1.5rem;}
+    #hero p {font-size: 1.3rem;}
 
     .cta {
         margin-top: 50px;
@@ -268,8 +314,8 @@ h1 {
     }
 
     .greenBtn, .whiteBtn {
-        font-size: 1.2rem;
-        padding: 15px 25px;
+        font-size: 1.05rem;
+        padding: 12px 22px;
     }
   
     .greenBtn:hover, .whiteBtn:hover {transform: translateY(-2px);}
@@ -280,5 +326,22 @@ h1 {
         background-color: var(--section-bg);
         border-color: var(--buttons-contact);
     }
+
+    /* SECTION ABOUT */
+
+    #about-skills {
+        flex-direction: row;
+        gap: 60px;
+        justify-content: space-between;
+    }
+
+    #about-skills p {font-size: 1.15rem;}
+
+    #about-skills p + p {margin-top: 10px;}
+
+    .chips li {padding: 6px 12px;}
+
+    .chips ul {gap: 20px;}
+
     
 }
