@@ -73,6 +73,33 @@ nav, section {
 
 .title a, .liste a {color: var(--main-text);}
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.liste {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: var(--bg);
+}
+
+.liste.open {
+    display: block;
+    max-height: 500px;
+    width: 100%;
+    padding: 20px;    
+}
+
+.liste ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
 .burger {
     display: flex;
     flex-direction: column;
@@ -96,27 +123,6 @@ nav, section {
 .burger.open span:nth-child(2) {opacity: 0;}
 
 .burger.open span:nth-child(3) {transform: rotate(-45deg) translate(6px, -6px);}
-
-.liste {
-    display: none;
-    position: absolute;
-    top: 70px;
-    background-color: var(--bg);
-}
-
-.liste.open {
-    display: block;
-    max-height: 500px;
-    width: 100%;
-    padding: 20px;    
-}
-
-.liste ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    margin-bottom: 30px;
-}
 
 /* --- Light/Dark Mode --- */
 
@@ -234,11 +240,12 @@ h1 {
 
     .title img {height: 50px;}
 
+    .actions {gap: 50px;}
+
     .liste {
         position: relative;
         display: flex;
         align-items: center;
-        gap: 50px;
         top: auto;        
     }
 
@@ -247,7 +254,6 @@ h1 {
     .liste ul { 
         flex-direction: row;
         gap: 30px;
-        margin-bottom: 0;
     }
 
     /* SECTION HERO */
