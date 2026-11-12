@@ -47,20 +47,25 @@ const videoModal = document.getElementById('video-modal');
 if (videoModal) {
     const videoFrame = videoModal.querySelector('.modal-video');
 
-    function openVideoModal(videoId) {
-        videoFrame.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+    let lastVideoTrigger = null;
+
+    function openVideoModal(link) {
+        lastVideoTrigger = link;
+        videoFrame.src = `https://www.youtube-nocookie.com/embed/${link.dataset.video}?autoplay=1`;
         videoModal.hidden = false;
+        videoModal.querySelector('.modal-close').focus();
     }
 
     function closeVideoModal() {
         videoModal.hidden = true;
         videoFrame.src = '';
+        lastVideoTrigger?.focus();
     }
 
     document.querySelectorAll('[data-video]').forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            openVideoModal(link.dataset.video);
+            openVideoModal(link);
         });
     });
 
@@ -79,16 +84,20 @@ const modal = document.getElementById('maquette-modal');
 
 if (modal) {
     const modalImg = modal.querySelector('.modal-img');
+    let lastTrigger = null;
 
     function openModal(link) {
+        lastTrigger = link;
         modalImg.src = link.dataset.full;
         modalImg.alt = link.getAttribute('aria-label') ?? '';
         modal.hidden = false;
+        modal.querySelector('.modal-close').focus();
     }
 
     function closeModal() {
         modal.hidden = true;
         modalImg.src = '';
+        lastTrigger?.focus();
     }
 
     document.querySelectorAll('[data-full]').forEach((btn) => {
