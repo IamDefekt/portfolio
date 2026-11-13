@@ -202,11 +202,14 @@ main {
 section {padding-block: 40px;}
 
 h1 {
-    font: clamp(3.2rem, 2.21rem + 4.21vw, 6rem) Space Grotesk;
+    font: clamp(2.2rem, 1.5rem + 3.5vw, 6rem) Space Grotesk;
+    overflow-wrap: break-word;
     font-weight: 700;
     background-image: var(--gradient);
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 24px;
     line-height: 1.1;
 }
