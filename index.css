@@ -183,7 +183,7 @@ main {
     gap: 40px;
 }
 
-section {padding-block: 24px;}
+section {padding-block: 40px;}
 
 h1 {
     font: clamp(3.2rem, 2.21rem + 4.21vw, 6rem) Space Grotesk;
@@ -195,7 +195,7 @@ h1 {
     line-height: 1.1;
 }
 
-#hero p, #about-skills p {
+#hero p, #about-skills p, #contact p {
     max-width: 60ch;
     color: var(--second-text);
 }
@@ -241,6 +241,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-block: 40px;
 }
 
 h2 {
@@ -320,7 +321,7 @@ h2 {
 
 .prez h3 {font-size: 1.15rem;}
 
-.prez p {
+.prez p, #contact p {
     color: var(--second-text);
     font-size: 0.9rem;
 }
@@ -438,6 +439,28 @@ body:has(.modal:not([hidden])) {
     overflow: hidden;
 }
 
+/* SECTION CONTACT */
+
+#contact .contactBox {
+    background-color: var(--buttons-contact);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#contact h2, #contact p {color: var(--bg);}
+
+#contact p {margin-top: 15px;}
+
+#contact .greenBtn, #contact .whiteBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+}
+
+#contact .whiteBtn {border: none;}
+
 
 @media (min-width: 1024px) {
 
@@ -474,7 +497,7 @@ body:has(.modal:not([hidden])) {
 
     /* SECTION HERO */
 
-    section {padding-block: 50px;}
+    section {padding-block: 70px;}
 
     #hero p {font-size: 1.3rem;}
 
@@ -503,6 +526,7 @@ body:has(.modal:not([hidden])) {
         flex-direction: row;
         gap: 60px;
         justify-content: space-between;
+        margin-block: 70px;
     }
 
     #about-skills p {font-size: 1.15rem;}
@@ -525,4 +549,13 @@ body:has(.modal:not([hidden])) {
     }
 
     .modal-content {padding: 50px;}
+
+    /* SECTION CONTACT */
+
+    #contact .contactBox {padding: 50px;}
+
+    #contact .cta {gap: 20px;}
+
+    #contact .greenBtn, #contact .whiteBtn {font-size: 0.9rem;}
+    
 }
