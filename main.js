@@ -7,14 +7,16 @@ const menu = document.getElementById('menu');
 const desktop = window.matchMedia('(min-width: 1024px)');
 
 burger.addEventListener('click', () => {
-    menu.classList.toggle('open'); 
+    const isOpen = menu.classList.toggle('open'); 
     burger.classList.toggle('open'); 
+    burger.setAttribute('aria-expanded', isOpen);
 });
 
 document.querySelectorAll('#menu a').forEach((link) => {
     link.addEventListener('click', () => {
         menu.classList.remove('open');
         burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
     });
 });
 
@@ -22,6 +24,7 @@ desktop.addEventListener('change', (e) => {
     if (e.matches) {
         menu.classList.remove('open');
         burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
     }
 });
 
