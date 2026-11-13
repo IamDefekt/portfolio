@@ -43,6 +43,8 @@ body {
     line-height: 1.6
 }
 
+body:has(.liste.open), body:has(.modal:not([hidden])) {overflow: hidden;}
+
 /* HEADER */
 
 header {
@@ -74,6 +76,11 @@ nav, section {
     font-weight: 500;
 }
 
+.title, #toggle-theme, .burger {
+    position: relative;
+    z-index: 20;
+}
+
 .title img {
     height: 40px;
     border-radius: 50%;
@@ -88,24 +95,33 @@ nav, section {
 }
 
 .liste {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    padding: 100px 24px 50px;
     background-color: var(--bg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s;
 }
 
 .liste.open {
-    display: block;
-    max-height: 500px;
-    width: 100%;
-    padding: 20px;    
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .liste ul {
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 30px; 
+}
+
+.liste a {
+    display: block;
+    padding-block: 5px;
+    font-size: 1.1rem;
 }
 
 .burger {
@@ -435,10 +451,6 @@ h2 {
     border-radius: 5px;
 }
 
-body:has(.modal:not([hidden])) {
-    overflow: hidden;
-}
-
 /* SECTION CONTACT */
 
 #contact .contactBox {
@@ -483,9 +495,15 @@ body:has(.modal:not([hidden])) {
 
     .liste {
         position: relative;
+        inset: auto;
+        z-index: auto;
         display: flex;
         align-items: center;
-        top: auto;        
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
     }
 
     .liste a:hover {color: var(--buttons-contact);}
