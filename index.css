@@ -61,7 +61,7 @@ nav {
     align-items: center;
 }
 
-nav, section {
+nav, section, footer {
     width: 100%;
     max-width: 1350px; 
     margin-inline: auto; 
@@ -211,7 +211,7 @@ h1 {
     line-height: 1.1;
 }
 
-#hero p, #about-skills p, #contact p {
+#hero p, #about-skills p, .prez p, #contact p {
     max-width: 60ch;
     color: var(--second-text);
 }
@@ -336,11 +336,6 @@ h2 {
 .description {min-height: 100px;}
 
 .prez h3 {font-size: 1.15rem;}
-
-.prez p, #contact p {
-    color: var(--second-text);
-    font-size: 0.9rem;
-}
 
 .cardChips ul {
     display: flex;
@@ -473,6 +468,20 @@ h2 {
 
 #contact .whiteBtn {border: none;}
 
+/* FOOTER */
+
+footer {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--second-text);
+}
+
 
 @media (min-width: 1024px) {
 
@@ -482,7 +491,7 @@ h2 {
 
     nav {height: 80px;}
 
-    nav, section {padding-inline: 50px;}
+    nav, section, footer {padding-inline: 50px;}
 
     .title {
         font-size: 1.3rem;
@@ -575,5 +584,13 @@ h2 {
     #contact .cta {gap: 20px;}
 
     #contact .greenBtn, #contact .whiteBtn {font-size: 0.9rem;}
-    
+
+    /* FOOTER */
+
+    footer {
+        height: 80px;
+        margin-top: 90px;
+    }
+
+    footer p {font-size: 1rem;}
 }
