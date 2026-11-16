@@ -303,6 +303,28 @@ h2 {
     gap: 30px;
 }
 
+.filtres {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.filtreBtn {
+    background-color: var(--bg);
+    color: var(--main-text);
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+.filtreBtn.active {
+    background-color: var(--buttons-contact);
+    color: var(--skill-bg);
+    border: 1px solid var(--buttons-contact);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -310,6 +332,8 @@ h2 {
     border-radius: 15px;
     overflow: hidden;
 }
+
+.card[hidden] {display: none;}
 
 .preview {
     height: 130px;
@@ -571,6 +595,8 @@ footer p {
     }
 
     /* SECTION REALISATIONS */
+
+    .filtreBtn {cursor: pointer;}
 
     .prez a:hover {
         filter: brightness(1.1); 
