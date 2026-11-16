@@ -115,3 +115,7 @@ if (modal) {
         if (e.key === 'Escape' && !modal.hidden) closeModal();
     });
 }
+
+// Date dynamique dans le footer
+
+document.getElementById('date').textContent = new Date().getFullYear();
