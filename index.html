@@ -107,9 +107,18 @@
 
         <section id="real">
             <h2>Réalisations</h2>
+            
+            <div class="filtres">
+                <p>Filtre :</p>
+
+                <button class="filtreBtn active" data-filter="all" aria-pressed="true">Tout</button>
+                <button class="filtreBtn" data-filter="sites">Sites web</button>
+                <button class="filtreBtn" data-filter="maquettes">Maquettes</button>
+            </div>
 
             <div class="cards">
-                <div class="card">
+
+                <div class="card" data-cat="sites">
                     <div class="preview">
                         <p>AL</p>
                     </div>
@@ -131,7 +140,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-cat="sites">
                     <div class="preview">
                         <p>MC</p>
                     </div>
@@ -157,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-cat="sites">
                     <div class="preview">
                         <p>TF</p>
                     </div>
@@ -178,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-cat="maquettes">
                     <div class="preview">
                         <img src="./medias/Gaia-Preview.avif" alt="Maquette Figma du site Gaïa">
                     </div>
@@ -199,7 +208,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-cat="maquettes">
                     <div class="preview">
                         <img src="./medias/Nebulax-Preview.avif" alt="Maquette Figma du site Nebulax">
                     </div>
@@ -220,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-cat="maquettes">
                     <div class="preview">
                         <img src="./medias/StudioHorizon-Preview.avif" alt="Maquette Figma du site Studio Horizon">
                     </div>
