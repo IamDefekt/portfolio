@@ -116,6 +116,30 @@ if (modal) {
     });
 }
 
+// Filtre des réalisations
+
+const cards = document.querySelectorAll('.card');
+const filtreBtns = document.querySelectorAll('.filtres button');
+
+filtreBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const filtre = btn.dataset.filter;
+
+        filtreBtns.forEach((b) => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+        });
+
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        cards.forEach((cards) => {
+            const visible = filtre === 'all' || cards.dataset.cat === filtre;
+            cards.hidden = !visible;
+        });
+    });
+});
+
 // Date dynamique dans le footer
 
 document.getElementById('date').textContent = new Date().getFullYear();
