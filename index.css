@@ -452,13 +452,13 @@ h2 {
     width: 90%;
     max-height: 85vh;
     overflow-y: auto;
-    padding: 15px;
+    padding: 25px;
 }
 
 .modal-close {
     position: absolute;
-    top: 12px;
-    right: 16px;
+    top: -6px;
+    right: 3px;
     background: none;
     border: none;
     font-size: 2.5rem;
@@ -605,6 +605,11 @@ footer p {
     }
 
     .modal-content {padding: 50px;}
+
+    .modal-close {
+        top: 12px;
+        right: 16px;
+    }
 
     /* SECTION CONTACT */
 
